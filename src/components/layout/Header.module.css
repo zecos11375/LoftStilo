@@ -1,0 +1,100 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.header {
+    background: rgb(214, 142, 7);
+    height: 80px;
+}
+
+.headerCon {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.logoCon a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+
+.menu li {
+    padding-right: 2rem;
+    font-size: 1.5rem;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    transition: ease 0.3s;
+
+}
+
+.menu li a:hover {
+    color: black;
+    transition: ease 0.3s;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .mobileMenu {
+        display: block;
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .header{
+        padding: 0 2rem;
+    }
+
+    .menu{
+        width: 100%;
+        height: auto;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 64px;
+        left: -100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background: #111;
+    }
+
+    .menu.active {
+        background: #111;
+        left: 0;
+        opacity: 1;
+        z-index: 1;
+        padding-left: 0;
+        align-content: center;
+        transition: 0.5s ease;
+    }
+
+    .menu li {
+        padding-right: 0;
+    }
+
+    .menuLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vw;
+        padding: 10px 0;
+    }
+
+    
+}

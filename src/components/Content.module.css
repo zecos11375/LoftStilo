@@ -1,0 +1,28 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.contentCon {
+    display: flex;
+    justify-content: space-between;
+}
+.contentCon:first-child, .contentCon:last-child {
+    padding: 5rem 0;
+}
+.contentL img {
+    width: 100%;
+    border-radius: 10px;
+}
+.contentR {
+    padding: 2rem;
+    text-align: left;
+}
+
+@media screen and (max-width: 480px) {
+    .contentCon {
+        flex-direction: column;
+    }
+    .contentCon:nth-child(2) .contentR {
+        order: 1;
+    }
+}
